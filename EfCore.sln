@@ -11,7 +11,9 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "EfCore.WebApi", "src\EfCore
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "EfCore.Data", "src\EfCore.Data\EfCore.Data.csproj", "{AEF62E1B-8EC4-43AF-9A98-55EAC87F0F20}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "EfCore.Common", "src\EfCore.Common\EfCore.Common\EfCore.Common.csproj", "{DD6AFEFA-B045-452E-B15B-16B8CCA65921}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "EfCore.Common", "src\EfCore.Common\EfCore.Common\EfCore.Common.csproj", "{DD6AFEFA-B045-452E-B15B-16B8CCA65921}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CustomLinq", "CustomLinq\CustomLinq.csproj", "{D3F43AB8-6A4C-4B56-A2AA-CD99B096EA24}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -31,6 +33,10 @@ Global
 		{DD6AFEFA-B045-452E-B15B-16B8CCA65921}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{DD6AFEFA-B045-452E-B15B-16B8CCA65921}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{DD6AFEFA-B045-452E-B15B-16B8CCA65921}.Release|Any CPU.Build.0 = Release|Any CPU
+		{D3F43AB8-6A4C-4B56-A2AA-CD99B096EA24}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{D3F43AB8-6A4C-4B56-A2AA-CD99B096EA24}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{D3F43AB8-6A4C-4B56-A2AA-CD99B096EA24}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{D3F43AB8-6A4C-4B56-A2AA-CD99B096EA24}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
