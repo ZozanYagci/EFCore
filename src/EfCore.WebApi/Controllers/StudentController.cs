@@ -15,9 +15,33 @@ namespace EfCore.WebApi.Controllers
         {
             this.applicationDbContext = applicationDbContext;
         }
+
+        private async Task EagerLoadings()
+        {
+            var student = await applicationDbContext.Students
+                //.Include(i=>i.Books).ThenInclude(i=>i.Courses)
+                .Include(i => i.Books)
+                .FirstOrDefaultAsync(i => i.Id == 5);
+        }
+        private async Task LazyLoadings() // If lazy loading is to be used, entities must be defined as virtual.
+        {
+            var students = await applicationDbContext.Students.ToListAsync();
+            foreach(var student in students)
+            {
+                foreach(var book in student.Books)
+                {
+                    Console.WriteLine(book.Name);
+                }
+            }
+           
+        }
+
         [HttpGet]
         public async Task<IActionResult> Get()
         {
+            await EagerLoadings();
+            return null;
+
             StudentFilter filter = new StudentFilter() { FirstName = "Zozan"};
             var students = applicationDbContext.Students.AsQueryable();
 

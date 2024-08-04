@@ -27,6 +27,7 @@ namespace EfCore.WebApi
 
             services.AddDbContext<ApplicationDbContext>(conf =>
             {
+                conf.UseLazyLoadingProxies();
                 conf.UseSqlServer(StringConstants.DbConnectionString);
                 conf.EnableSensitiveDataLogging();
                 //conf.LogTo(Console.WriteLine);
